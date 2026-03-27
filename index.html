@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mexico City — Retro Flight</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="hud">
+    <div class="hud-panel">
+      <div class="hud-title">MEXICO CITY</div>
+      <div class="hud-row"><span>AIRSPEED</span><span id="airspeed">0</span> <small>KTS</small></div>
+      <div class="hud-row"><span>ALT</span><span id="altitude">0</span> <small>FT</small></div>
+      <div class="hud-row"><span>HDG</span><span id="heading">0</span>°</div>
+      <div class="hud-row"><span>PITCH</span><span id="pitch">0</span>°</div>
+      <div class="hud-row"><span>THR</span><span id="throttle">65</span>%</div>
+      <div class="hud-row"><span>RWY</span><span id="runway-hud">—</span></div>
+      <div class="hud-row"><span>VIEW</span><span id="wire-hud">SOLID</span></div>
+    </div>
+    <div class="hud-help">
+      <kbd>↑</kbd><kbd>↓</kbd> pitch · <kbd>←</kbd><kbd>→</kbd> roll · <kbd>A</kbd><kbd>D</kbd> rudder<br />
+      <kbd>W</kbd><kbd>S</kbd> throttle · <kbd>C</kbd> chase / cockpit · <kbd>F</kbd> wireframe · <kbd>R</kbd> reset<br />
+      Runway: east of downtown — fly toward RWY <strong>NEAR</strong>, land ~&lt;50 kt
+    </div>
+  </div>
+  <canvas id="c"></canvas>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
